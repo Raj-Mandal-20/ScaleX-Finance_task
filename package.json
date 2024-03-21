@@ -1,0 +1,29 @@
+{
+  "name": "scalex-finance-assignment",
+  "version": "1.0.0",
+  "description": "internship assignemnt",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raj-Mandal-20/ScaleX-Finance_task.git"
+  },
+  "author": "Raj Mandal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raj-Mandal-20/ScaleX-Finance_task/issues"
+  },
+  "homepage": "https://github.com/Raj-Mandal-20/ScaleX-Finance_task#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.0",
+    "mongoose": "^8.2.2"
+  }
+}
