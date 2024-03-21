@@ -3,47 +3,22 @@ const Schema = mongoose.Schema;
 
 const transactionSchema = new Schema({
     m5 : {
-        buys : {
-            type : Number,
-            required : true,
-        },
-        sells : {
-            type : Number,
-            required : true,
-        }
+       type : Schema.Types.ObjectId,
+       ref : 'BuySell',
 
     },
     h1 : {
-        buys : {
-            type : Number,
-            required : true,
-        },
-        sells : {
-            type : Number,
-            required : true,
-        }
+       type : Schema.Types.ObjectId,
+       ref : 'BuySell',
 
     },
     h6 : {
-        buys : {
-            type : Number,
-            required : true,
-        },
-        sells : {
-            type : Number,
-            required : true,
-        }
-
+        type : Schema.Types.ObjectId,
+        ref : 'BuySell',
     },
     h24 : {
-        buys : {
-            type : Number,
-            required : true,
-        },
-        sells : {
-            type : Number,
-            required : true,
-        }
+        type : Schema.Types.ObjectId,
+        ref : 'BuySell',
 
     },
     pairId : {
