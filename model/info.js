@@ -18,9 +18,7 @@ const infoSchema = new Schema({
         type : Schema.Types.ObjectId,
         ref : 'Pair',
         required : true
-
     }
-
 
 });
 

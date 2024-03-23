@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const baseTokenSchema = new Schema({
-    baseToken : {
+   
         address : {
             type : String,
             required : true
@@ -20,7 +20,7 @@ const baseTokenSchema = new Schema({
             ref : 'Pair',
             required : true
         }
-    },
+
     
 });
 
