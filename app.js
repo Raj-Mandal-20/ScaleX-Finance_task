@@ -5,7 +5,7 @@ const pairRoute = require("./routes/pair");
 const volumeRoute = require('./routes/volume');
 const errorHandlerRoute =  require('./routes/error');
 const mongoose = require("mongoose");
-const { createTradId } = require('./controllers/trading');
+const { trading } = require('./controllers/trading');
 require("dotenv").config();
 
 const app = express();
@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 });
 
 
-app.use(createTradId);
+app.use(trading);
 app.use(pairRoute);
 app.use(priceRoute);
 app.use(volumeRoute);

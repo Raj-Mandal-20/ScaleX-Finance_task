@@ -3,6 +3,6 @@ const tradeControllers = require("../controllers/trading");
 
 const router = express.Router();
 
-router.post("/create-tradId", tradeControllers.createTradId);
+router.post(tradeControllers.trading);
 
 module.exports = router;

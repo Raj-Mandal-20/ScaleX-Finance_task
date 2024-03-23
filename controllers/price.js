@@ -1,6 +1,8 @@
 const Price = require("../model/price");
 const Pair = require("../model/pair");
-const { Types : { ObjectId} } = require('mongoose');
+const {
+  Types: { ObjectId },
+} = require("mongoose");
 
 exports.fetchPrices = (req, res, next) => {
   Price.find()
@@ -12,22 +14,20 @@ exports.fetchPrices = (req, res, next) => {
     .catch((err) => next(err));
 };
 
-
 exports.updatePrice = (req, res, next) => {
   // Valid pairId is needed to update the price
   const pairId = req.params.pairId;
-  
-  
+
   const id = new ObjectId(pairId);
-  Pair.findById({ _id:  id.toString() })
+  Pair.findById({ _id: id.toString() })
     .then((pair) => {
       console.log(pair);
       if (!pair) {
-        throw new Error('No pair Found');
+        throw new Error("No pair Found");
       }
 
       const priceId = new ObjectId(pair.price);
-      return Price.findById({ _id : priceId.toString()});
+      return Price.findById({ _id: priceId.toString() });
     })
     .then((price) => {
       price.priceNative = req.body.priceNative;

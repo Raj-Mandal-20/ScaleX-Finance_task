@@ -1,9 +1,10 @@
 const express = require("express");
-const tradeControllers = require('../controllers/trading');
+const pairController = require('../controllers/pair');
 const router = express.Router();
 
 
-router.delete('/delete-pair/:pairId', tradeControllers.deletePair);
-router.post('/trading', tradeControllers.postTrading);
+router.delete('/delete-pair/:pairId', pairController.deletePair);
+router.post('/create-pair', pairController.postTrading);
+
 
 module.exports = router;
