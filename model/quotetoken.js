@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const quoteTokenSchema = new Schema({
-    quoteToken : {
         address : {
             type : String,
             required : true
@@ -20,8 +19,6 @@ const quoteTokenSchema = new Schema({
             ref : 'Pair',
             required : true
         }
-    },
-    
 });
 
 module.exports = mongoose.model('QuoteToken', quoteTokenSchema);

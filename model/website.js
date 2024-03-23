@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const websiteSchema = new Schema({
-    websites : [{
+    // websites : [{
         label : {
             type : String,
             required : true
@@ -16,7 +16,7 @@ const websiteSchema = new Schema({
             ref : 'Info',
             required : true
         }
-    }],
+    // }],
     
 
 });

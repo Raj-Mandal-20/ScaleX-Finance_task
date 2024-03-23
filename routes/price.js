@@ -1,9 +1,8 @@
-const express = require("express");
-
+const express = require('express');
+const priceController = require('../controllers/price');
 const router = express.Router();
 
-router.get("/price", (req, res, next) => {});
-
-router.post("/price", (req, res, next) => {});
+router.put('/update-price/:pairId', priceController.updatePrice);
+router.get('/price', priceController.fetchPrices);
 
 module.exports = router;
